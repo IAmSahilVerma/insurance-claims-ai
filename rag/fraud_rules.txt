@@ -1,0 +1,5 @@
+Rule 1: Claims with multiple past claims are higher fraud risk.
+Rule 2: High vehicle price combined with no police report increases suspicion.
+Rule 3: Long delay between accident and claim increases fraud probability.
+Rule 4: Multiple supplements added to claim can indicate exaggeration.
+Rule 5: Young drivers with expensive cars have elevated fraud patterns.

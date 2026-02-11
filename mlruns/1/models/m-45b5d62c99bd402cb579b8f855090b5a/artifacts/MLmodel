@@ -1,0 +1,23 @@
+artifact_path: file:///D:/Github/insurance-claims-ai/mlruns/1/models/m-45b5d62c99bd402cb579b8f855090b5a/artifacts
+flavors:
+  lightgbm:
+    code: null
+    data: model.pkl
+    lgb_version: 4.6.0
+    model_class: lightgbm.sklearn.LGBMClassifier
+    serialization_format: cloudpickle
+    skops_trusted_types: null
+  python_function:
+    data: model.pkl
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.lightgbm
+    python_version: 3.10.19
+mlflow_version: 3.9.0
+model_id: m-45b5d62c99bd402cb579b8f855090b5a
+model_size_bytes: 1665051
+model_uuid: m-45b5d62c99bd402cb579b8f855090b5a
+prompts: null
+run_id: 5628050c547e4fc89064f70a42a403d1
+utc_time_created: '2026-02-11 14:18:49.299848'
