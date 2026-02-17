@@ -1,0 +1,11 @@
+mlflow==3.9.0
+chromadb==1.4.1
+cloudpickle==3.1.2
+lightgbm==4.6.0
+matplotlib==3.10.8
+numpy==1.26.4
+pandas==2.3.3
+psutil==7.2.2
+pyarrow==22.0.0
+scikit-learn==1.7.2
+scipy==1.15.3

@@ -1,11 +1,14 @@
-import os
+from rag.vector_store import collection
 
-def retrieve_rules():
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    rules_path = os.path.join(current_dir, "fraud_rules.txt")
-    with open(rules_path, "r") as f:
-        rules = f.read()
-    return rules
-
-# if __name__=="__main__":
-#     print(retrieve_rules())
+def retrieve_rules(claim_data: dict, shap_factors: list, top_k: int = 3):
+    query_text = f"""
+    Claim data: {claim_data}
+    Key risk factors: {shap_factors}
+    """
+    
+    results = collection.query(
+        query_texts=[query_text],
+        n_results = top_k
+    )
+    
+    return results["documents"][0]

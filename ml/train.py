@@ -7,6 +7,8 @@ import mlflow
 import mlflow.lightgbm
 import joblib
 import os
+import shap
+import pickle
 
 MODEL_DIR = "models"
 os.makedirs(MODEL_DIR, exist_ok=True)
@@ -82,6 +84,11 @@ with mlflow.start_run():
     print(f"ROC-AUC: {roc:.4f}")
     print(f"F1-score: {f1:.4f}")
     print("\nClassification Report:\n", classification_report(y_test, y_pred))
+    
+    # SHAP Explainer
+    explainer = shap.TreeExplainer(model)
+    with open("models/shap_explainer.pkl", "wb") as f:
+        pickle.dump(explainer, f)
     
     # Log metrics and model to MLflow
     mlflow.log_param("n_estimators", 500)
