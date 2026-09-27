@@ -135,7 +135,7 @@ insurance-claims-ai/
 # Quick Start
 ## 1. Clone the repository
 ```bash
-git clone https://github.com/<your-username>/insurance-claims-ai.git
+git clone https://github.com/IAmSahilVerma/insurance-claims-ai
 cd insurance-claims-ai.git
 ```
 
