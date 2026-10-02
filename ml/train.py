@@ -85,11 +85,6 @@ with mlflow.start_run():
     print(f"F1-score: {f1:.4f}")
     print("\nClassification Report:\n", classification_report(y_test, y_pred))
     
-    # SHAP Explainer
-    explainer = shap.TreeExplainer(model)
-    with open("models/shap_explainer.pkl", "wb") as f:
-        pickle.dump(explainer, f)
-    
     # Log metrics and model to MLflow
     mlflow.log_param("n_estimators", 500)
     mlflow.log_param("learning_rate", 0.05)
