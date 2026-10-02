@@ -93,13 +93,11 @@ The knowledge base is also deliberately small: five hand-written rules in `rag/f
 ## 1. Clone the repository
 ```bash
 git clone https://github.com/IAmSahilVerma/insurance-claims-ai
-cd insurance-claims-ai.git
+cd insurance-claims-ai
 ```
 
 ## 2. Create a virtual environment
 ```bash
-git clone https://github.com/IAmSahilVerma/insurance-claims-ai.git
-cd insurance-claims-ai
 conda create -n insurance-ai python=3.10
 conda activate insurance-ai
 pip install -r requirements.txt
@@ -176,6 +174,7 @@ Python, LightGBM, SHAP, ChromaDB, sentence-transformers, OpenAI GPT-4o-mini, Fas
 		"Age : 34"
 	],
 	"justification": "The fraud probability is low at 0.1866, and the key risk factors indicate that the fault lies with the policy holder, which is a common scenario in legitimate claims. Additionally, the presence of a police report filed supports the legitimacy of the claim.",
-	"recommended_action": "Approve"
+	"recommended_action": "Approve",
+    "needs_human_review": false
 }
 ```
